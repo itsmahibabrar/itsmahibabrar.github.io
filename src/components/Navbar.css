@@ -253,7 +253,7 @@
   box-shadow: var(--nav-shadow);
   max-height: calc(100vh - 64px);
   overflow-y: auto;
-   z-index: 1002;
+  z-index: 1002;
 }
 
 .mobile-nav.active {
