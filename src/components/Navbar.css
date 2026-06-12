@@ -238,6 +238,7 @@
   position: fixed;
   left: -100%;
   top: 64px;
+  z-index: 1002;
   flex-direction: column;
   background: var(--nav-bg-scrolled);
   width: 100%;
@@ -301,7 +302,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(2px);
-  z-index: 999;
+  z-index: 1000;
 }
 
 /* ==================== RESPONSIVE ==================== */
