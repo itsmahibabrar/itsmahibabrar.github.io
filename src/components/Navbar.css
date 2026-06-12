@@ -209,7 +209,10 @@
   width: 30px;
   height: 24px;
   position: relative;
-  z-index: 1001;
+  z-index: 1003;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .hamburger-menu span {
@@ -250,6 +253,7 @@
   box-shadow: var(--nav-shadow);
   max-height: calc(100vh - 64px);
   overflow-y: auto;
+   z-index: 1002;
 }
 
 .mobile-nav.active {
@@ -301,7 +305,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(2px);
-  z-index: 999;
+  z-index: 1001;
 }
 
 /* ==================== RESPONSIVE ==================== */

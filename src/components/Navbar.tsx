@@ -106,10 +106,31 @@ export default function Navbar() {
     window.localStorage.setItem('theme', theme);
   }, [theme]);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleEscape);
+    };
+  }, [isMobileMenuOpen]);
+
   const activeSection = getActiveSectionId(location.pathname, location.hash, activeSectionFromScroll);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((currentValue) => !currentValue);
   };
 
   const toggleTheme = () => {
@@ -166,17 +187,25 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Menu */}
-        <div
+        <button
+          type="button"
           className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={toggleMobileMenu}
+          aria-label={isMobileMenuOpen ? 'Close mobile navigation menu' : 'Open mobile navigation menu'}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
         >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
 
         {/* Mobile Navigation */}
-        <div className={`mobile-nav ${isMobileMenuOpen ? 'active' : ''}`}>
+        <div
+          id="mobile-navigation"
+          className={`mobile-nav ${isMobileMenuOpen ? 'active' : ''}`}
+          aria-hidden={!isMobileMenuOpen}
+        >
           {navLinks.map((link) => (
             <Link
               key={link.id}
