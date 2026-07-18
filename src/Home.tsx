@@ -136,15 +136,15 @@ export default function Home() {
             <p className="section-lead">A snapshot of experiments shipped recently.</p>
           </header>
           <div className="projects">
-            <article class="project-card">
-              <div class="project-top">
-                <div class="pill">Data Infrastructure</div>
-                <div class="pill subtle">Open source</div>
+            <article className="project-card">
+              <div className="project-top">
+                <div className="pill">Data Infrastructure</div>
+                <div className="pill subtle">Open source</div>
               </div> 
               <h3>SSC Open MCQ Bank</h3>
               <p>A strictly validated, schema-driven dataset compiled directly from public national examinations to break data monopolies and democratize Bangladeshi EdTech.</p>
-              <div class="project-links">
-                <a href="https://github.com/itsmahibabrar/ssc-open-mcq-bank" target="_blank" rel="noopener noreferrer" class="btn text">View project</a>
+              <div className="project-links">
+                <a href="https://github.com/itsmahibabrar/ssc-open-mcq-bank" target="_blank" rel="noopener noreferrer" className="btn text">View project</a>
               </div>
             </article>
             <article className="project-card">
