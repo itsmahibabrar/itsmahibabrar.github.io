@@ -59,5 +59,15 @@ export const projectsData: Project[] = [
     techStack: ["Realtime", "MCP", "Game Ops"],
     githubUrl: "https://mcpize.com/mcp/minecraft-server-status",
     featured: true
+  },
+  {
+    slug: "edutoolsbd",
+    title: "EduToolsBD",
+    category: "EdTech Platform",
+    badge: "Live Project",
+    description: "A Bangladeshi education-focused web platform for useful learning tools and resources.",
+    techStack: ["Web", "EdTech", "Frontend"],
+    githubUrl: "https://edutoolsbd.vercel.app/",
+    featured: true
   }
 ];
