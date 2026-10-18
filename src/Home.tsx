@@ -172,7 +172,7 @@ export default function Home() {
                 </div>
                 <div className="project-links">
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn text">
-                    View GitHub
+                    View Project
                   </a>
                   {project.caseStudyUrl && (
                     <a href={project.caseStudyUrl} className="btn text secondary" style={{ marginLeft: '1rem' }}>
